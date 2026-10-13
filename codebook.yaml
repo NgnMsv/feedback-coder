@@ -1,0 +1,125 @@
+# The codebook: the categories ("codes") a comment can receive.
+#
+# In qualitative research a codebook is the shared rulebook that lets two
+# people code the same text the same way. Here it is shared between you and
+# the model: the LLM prompt is built from this file, and the human labels in
+# data/gold_labels.csv follow the same rules.
+#
+# Each code has:
+#   definition  – what the code means, in one sentence
+#   include     – cases that DO get this code
+#   exclude     – cases that look similar but do NOT get this code
+#   examples    – short real-looking comments that get this code
+#   keywords    – used only by the offline keyword baseline (not by the LLM).
+#                 Written from the definitions only, never from data/feedback.csv:
+#                 keywords picked while reading the test comments would "leak" the
+#                 answers and make the baseline look far better than it is.
+
+codes:
+  - id: bug_crash
+    label: Bugs & crashes
+    definition: The app does something wrong technically – it crashes, freezes, shows an error, logs the user out, or a feature stops working.
+    include:
+      - crashes, freezes, error messages, forced log-outs
+      - a screen or feature that does not update or respond
+    exclude:
+      - the app is merely slow (use performance)
+      - wrong or missing bank data (use bank_sync)
+    examples:
+      - "App closes itself when I try to edit a recurring payment."
+      - "Login fails with an unknown error."
+    keywords: [crash, crashes, freeze, freezes, error, bug, broken, not working]
+
+  - id: performance
+    label: Speed & battery
+    definition: Remarks about speed, loading time, lag or battery use – positive or negative.
+    include:
+      - slow or fast loading, lag, battery drain
+      - praise for speed ("loads instantly")
+    exclude:
+      - the app stops working completely (use bug_crash)
+    examples:
+      - "It takes almost 10 seconds to load my transactions."
+      - "Loads instantly, even with three years of data."
+    keywords: [slow, fast, lag, laggy, battery, loading]
+
+  - id: usability
+    label: Usability & design
+    definition: Something that exists in the app is hard to find, understand, read or use, or the user comments on how the interface is designed.
+    include:
+      - confusing navigation, too many steps, unclear wording
+      - readability, layout, text size, colours in charts
+    exclude:
+      - asking for something new that does not exist yet (use feature_request)
+    examples:
+      - "Why do I need five taps to add a simple expense?"
+      - "The onboarding was confusing."
+    keywords: [confusing, complicated, hard to find, hard to use, design, navigation, menu]
+
+  - id: bank_sync
+    label: Bank sync & data
+    definition: Problems or experiences with the connection to existing banks and the transaction data it brings in.
+    include:
+      - sync errors, disconnects, duplicate or missing transactions
+      - wrong balances or wrong automatic categories after a sync
+      - positive remarks about a bank connection working well
+    exclude:
+      - asking to add a new bank or service that is not supported yet (use feature_request)
+    examples:
+      - "Some transactions show up twice after syncing with my bank."
+      - "My balance is wrong by €200 after the last sync."
+    keywords: [sync, bank, bank account]
+
+  - id: feature_request
+    label: Feature requests
+    definition: The user asks for something the app does not offer yet, or describes a missing capability.
+    include:
+      - 'phrases like "please add…", "would be great if…", "can you add…"'
+      - 'a limitation phrased as a complaint ("search only works by name")'
+    exclude:
+      - complaints about a feature that exists but is broken (use bug_crash)
+    examples:
+      - "Please add a dark mode."
+      - "Would love multi-currency support."
+    keywords: [please add, would be great, would love, can you add, feature request, wish]
+
+  - id: pricing
+    label: Pricing & billing
+    definition: Price, subscription, plans, trials, charges and refunds.
+    include:
+      - price too high or fair, plan structure, student discounts
+      - wrong or double charges, refunds
+    exclude:
+      - general value statements without money ("worth it" alone is praise)
+    examples:
+      - "€6.99 a month is too much."
+      - "I was charged after cancelling my trial."
+    keywords: [price, expensive, subscription, charged, pay, cheap, cost]
+
+  - id: support
+    label: Support & help
+    definition: Contact with customer support, or the help resources (help center, tutorials, chat bot).
+    include:
+      - response time, friendliness, whether support solved the issue
+      - help articles, tutorials, chat bot
+    exclude:
+      - the problem itself that the user contacted support about (code that separately)
+    examples:
+      - "Support never answered my email."
+      - "The tutorial videos helped a lot."
+    keywords: [support, customer service, help center]
+
+  - id: praise
+    label: Praise
+    definition: The user expresses clear positive appreciation of the app or one of its features.
+    include:
+      - 'words like "love", "best", "genius", "5 stars", or thanks for an improvement'
+    exclude:
+      - neutral statements ("the app is okay")
+      - a positive remark only about speed (use performance alone)
+    examples:
+      - "Honestly the best money app I've tried."
+      - "The 'smart categories' feature is genius."
+    keywords: [love, great, best, awesome, excellent, amazing]
+
+sentiments: [positive, negative, mixed, neutral]

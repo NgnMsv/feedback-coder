@@ -1,0 +1,61 @@
+id,source,date,text
+F001,app_store,2026-09-08,"The app crashes every time I open the reports tab. Reinstalled twice, still crashes."
+F002,app_store,2026-09-15,Love how clean the dashboard looks. Finally a budgeting app I actually enjoy opening.
+F003,support_ticket,2026-09-22,Bank sync has been broken for a week. My Sparkasse transactions just stop at Oct 2.
+F004,survey,2026-09-29,"Please add a dark mode, my eyes hurt at night."
+F005,app_store,2026-10-06,€6.99 a month is too much for what is basically a spreadsheet.
+F006,app_store,2026-09-02,It takes almost 10 seconds to load my transactions. Way too slow.
+F007,survey,2026-09-09,I can't find where to change the category of a transaction. The menu is buried three levels deep.
+F008,app_store,2026-09-16,Wrote to support about a double charge and got a refund within a day. Impressed!
+F009,survey,2026-09-23,Would be great if I could export everything to CSV for my tax return.
+F010,support_ticket,2026-09-30,Since the last update the app freezes when I add a receipt photo.
+F011,app_store,2026-10-07,"Great app, but the yearly plan should be cheaper for students."
+F012,support_ticket,2026-09-03,Some transactions show up twice after syncing with my bank.
+F013,survey,2026-09-10,"The onboarding was confusing, I didn't understand what a 'pocket' is."
+F014,app_store,2026-09-17,"Battery drain is crazy, the app runs in the background all the time."
+F015,app_store,2026-09-24,Support never answered my email. Two weeks now.
+F016,app_store,2026-10-01,"Simple, fast and does exactly what I need. 5 stars."
+F017,survey,2026-10-08,Shared budgets with my partner would make this perfect.
+F018,support_ticket,2026-09-04,Login fails with 'unknown error' after I enabled two-factor authentication.
+F019,survey,2026-09-11,The charts are beautiful but I can't tell which colour is which category.
+F020,app_store,2026-09-18,"Not slow anymore since the update, thanks!"
+F021,support_ticket,2026-09-25,I was charged after cancelling my trial. Not okay.
+F022,support_ticket,2026-10-02,My N26 account disconnects every few days and I have to log in again.
+F023,survey,2026-10-09,Can you add a widget for the home screen?
+F024,survey,2026-09-05,The help center articles are outdated and the chat bot is useless.
+F025,app_store,2026-09-12,"Honestly the best money app I've tried, and I've tried many."
+F026,app_store,2026-09-19,Scrolling through the transaction list is laggy on my older phone.
+F027,survey,2026-09-26,Why do I need five taps to add a simple expense?
+F028,support_ticket,2026-10-03,App closes itself when I try to edit a recurring payment.
+F029,app_store,2026-10-10,"Free version is enough for me, no need to pay. Nice that you keep it free."
+F030,support_ticket,2026-09-06,Categories are assigned wrong after sync – groceries show as 'transport'.
+F031,survey,2026-09-13,"Please let me set budgets per week, not only per month."
+F032,support_ticket,2026-09-20,"Support was friendly and explained the sync issue clearly, but the problem still isn't fixed."
+F033,app_store,2026-09-27,The new design is a mess. Buttons moved and nothing is where it used to be.
+F034,app_store,2026-10-04,"Loads instantly, even with three years of data."
+F035,support_ticket,2026-10-11,I get an error 500 whenever I try to upload a CSV.
+F036,app_store,2026-09-07,The subscription price went up without any notice.
+F037,survey,2026-09-14,"Would love multi-currency support, I live between Germany and Switzerland."
+F038,survey,2026-09-21,Sync with PayPal would be a game changer.
+F039,app_store,2026-09-28,"Everything works, nothing to complain about."
+F040,survey,2026-10-05,"The search doesn't find transactions by amount, only by name."
+F041,app_store,2026-09-01,Keeps logging me out. Annoying.
+F042,app_store,2026-09-08,Reports take forever to generate for a full year.
+F043,survey,2026-09-15,"I like the idea, but the app is too complicated for my parents."
+F044,support_ticket,2026-09-22,"Customer service replied in German although I wrote in English, but they solved it."
+F045,app_store,2026-09-29,"Bank connection works perfectly with Volksbank, no issues so far."
+F046,app_store,2026-10-06,Crashes on startup on Android 15.
+F047,survey,2026-09-02,"Pay once option please, I hate subscriptions."
+F048,survey,2026-09-09,The tutorial videos helped a lot to understand the features.
+F049,survey,2026-09-16,"Notifications come at 3 am, please let me choose the time."
+F050,survey,2026-09-23,The app is okay.
+F051,support_ticket,2026-09-30,My balance is wrong by €200 after the last sync.
+F052,support_ticket,2026-10-07,Pie chart doesn't update when I delete a transaction until I restart the app.
+F053,app_store,2026-09-03,Cheaper than other budgeting apps and does the same. Switched last month.
+F054,survey,2026-09-10,Adding expenses offline and syncing later would be really useful on the train.
+F055,app_store,2026-09-17,"Super slow on Wi-Fi at university, fine on mobile data."
+F056,app_store,2026-09-24,Thanks to the weekly summary I saved 300 euros this month!
+F057,app_store,2026-10-01,The 'smart categories' feature is genius.
+F058,support_ticket,2026-10-08,Got charged twice for the annual plan and support hasn't replied in 5 days.
+F059,survey,2026-09-04,Icons are tiny and the text doesn't scale with my phone's font size.
+F060,support_ticket,2026-09-11,After the update my bank (DKB) is no longer listed. Can't connect at all.
