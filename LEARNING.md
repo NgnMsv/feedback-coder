@@ -75,7 +75,8 @@ you will defend them in an interview. Note the three hardest cases. Those are yo
   the model lose? (Later, with an API key, run both versions and compare the F1.)
 
 **Check yourself**
-- Why `temperature = 0`?
+- Why `temperature = 0` for OpenAI, and why does the Claude client not send it at all?
+  (Newer Claude models reject the parameter with a 400 error; the cache in `runs/` makes runs repeatable instead.)
 - What is "few-shot prompting", and where does this project use it?
 
 ---

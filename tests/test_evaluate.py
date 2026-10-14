@@ -3,7 +3,6 @@ import unittest
 from feedback_coder.data import GoldLabel
 from feedback_coder.evaluate import CodeScore, cohens_kappa, evaluate
 from feedback_coder.verify import VerifiedCode, VerifiedComment
-
 from helpers import TINY_CODEBOOK
 
 

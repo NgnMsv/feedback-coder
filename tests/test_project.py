@@ -11,7 +11,6 @@ from feedback_coder.providers import KeywordCoder
 from feedback_coder.report import highlight, render
 from feedback_coder.themes import build_themes
 from feedback_coder.verify import VerifiedComment
-
 from helpers import COMMENTS, ROOT
 
 

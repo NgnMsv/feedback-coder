@@ -8,7 +8,6 @@ from feedback_coder.codebook import load_codebook
 from feedback_coder.providers import KeywordCoder, make_coder
 from feedback_coder.providers.anthropic_client import AnthropicClient
 from feedback_coder.providers.openai_client import OpenAIClient
-
 from helpers import COMMENTS, ROOT, TINY_CODEBOOK
 
 
@@ -54,6 +53,7 @@ class HttpClientTests(unittest.TestCase):
         self.assertEqual(req.get_header("X-api-key"), "ak-test")
         self.assertEqual(body["system"], "SYS")
         self.assertEqual(body["messages"], [{"role": "user", "content": "USER"}])
+        self.assertNotIn("temperature", body)  # newer Claude models reject it
 
 
 class MakeCoderTests(unittest.TestCase):

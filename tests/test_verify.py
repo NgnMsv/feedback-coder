@@ -2,7 +2,6 @@ import unittest
 
 from feedback_coder.schema import CodeAssignment, CodedComment
 from feedback_coder.verify import evidence_in_text, normalize, verify_batch
-
 from helpers import COMMENTS, TINY_CODEBOOK
 
 

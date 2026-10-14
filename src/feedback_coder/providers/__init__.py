@@ -46,4 +46,4 @@ def make_coder(provider: str, model: str | None = None, *, require_key: bool = T
     return LLMCoder(client)
 
 
-__all__ = ["Coder", "LLMCoder", "KeywordCoder", "make_coder", "DEFAULT_MODELS"]
+__all__ = ["DEFAULT_MODELS", "Coder", "KeywordCoder", "LLMCoder", "make_coder"]

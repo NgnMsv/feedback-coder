@@ -18,7 +18,9 @@ class AnthropicClient:
         body = {
             "model": self.model,
             "max_tokens": 4096,
-            "temperature": 0,
+            # No "temperature": newer Claude models reject it (API error 400,
+            # "temperature is deprecated for this model"). Repeatability comes
+            # from the cache in runs/ instead.
             "system": system,
             "messages": [{"role": "user", "content": user}],
         }
