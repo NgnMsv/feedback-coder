@@ -1,0 +1,246 @@
+{
+  "provider": "anthropic",
+  "model": "claude-haiku-5-5",
+  "n": 60,
+  "micro_precision": 0.958,
+  "micro_recall": 0.958,
+  "micro_f1": 0.958,
+  "macro_f1": 0.965,
+  "mean_kappa": 0.957,
+  "exact_match": 0.9,
+  "sentiment_accuracy": 0.967,
+  "per_code": [
+    {
+      "code": "bug_crash",
+      "support": 8,
+      "precision": 0.889,
+      "recall": 1.0,
+      "f1": 0.941,
+      "kappa": 0.932
+    },
+    {
+      "code": "performance",
+      "support": 8,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "kappa": 1.0
+    },
+    {
+      "code": "usability",
+      "support": 7,
+      "precision": 0.875,
+      "recall": 1.0,
+      "f1": 0.933,
+      "kappa": 0.924
+    },
+    {
+      "code": "bank_sync",
+      "support": 8,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "kappa": 1.0
+    },
+    {
+      "code": "feature_request",
+      "support": 11,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "kappa": 1.0
+    },
+    {
+      "code": "pricing",
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "kappa": 1.0
+    },
+    {
+      "code": "support",
+      "support": 7,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "kappa": 1.0
+    },
+    {
+      "code": "praise",
+      "support": 14,
+      "precision": 0.917,
+      "recall": 0.786,
+      "f1": 0.846,
+      "kappa": 0.804
+    }
+  ],
+  "disagreements": [
+    {
+      "id": "F002",
+      "text": "Love how clean the dashboard looks. Finally a budgeting app I actually enjoy opening.",
+      "model": [
+        "praise",
+        "usability"
+      ],
+      "human": [
+        "praise"
+      ],
+      "missed": [],
+      "extra": [
+        "usability"
+      ]
+    },
+    {
+      "id": "F043",
+      "text": "I like the idea, but the app is too complicated for my parents.",
+      "model": [
+        "praise",
+        "usability"
+      ],
+      "human": [
+        "usability"
+      ],
+      "missed": [],
+      "extra": [
+        "praise"
+      ]
+    },
+    {
+      "id": "F045",
+      "text": "Bank connection works perfectly with Volksbank, no issues so far.",
+      "model": [
+        "bank_sync"
+      ],
+      "human": [
+        "bank_sync",
+        "praise"
+      ],
+      "missed": [
+        "praise"
+      ],
+      "extra": []
+    },
+    {
+      "id": "F048",
+      "text": "The tutorial videos helped a lot to understand the features.",
+      "model": [
+        "support"
+      ],
+      "human": [
+        "praise",
+        "support"
+      ],
+      "missed": [
+        "praise"
+      ],
+      "extra": []
+    },
+    {
+      "id": "F053",
+      "text": "Cheaper than other budgeting apps and does the same. Switched last month.",
+      "model": [
+        "pricing"
+      ],
+      "human": [
+        "praise",
+        "pricing"
+      ],
+      "missed": [
+        "praise"
+      ],
+      "extra": []
+    },
+    {
+      "id": "F060",
+      "text": "After the update my bank (DKB) is no longer listed. Can't connect at all.",
+      "model": [
+        "bank_sync",
+        "bug_crash"
+      ],
+      "human": [
+        "bank_sync"
+      ],
+      "missed": [],
+      "extra": [
+        "bug_crash"
+      ]
+    }
+  ],
+  "baseline": {
+    "n": 60,
+    "micro_precision": 0.889,
+    "micro_recall": 0.556,
+    "micro_f1": 0.684,
+    "macro_f1": 0.699,
+    "mean_kappa": 0.662,
+    "exact_match": 0.483,
+    "sentiment_accuracy": 0.817,
+    "per_code": [
+      {
+        "code": "bug_crash",
+        "support": 8,
+        "precision": 0.833,
+        "recall": 0.625,
+        "f1": 0.714,
+        "kappa": 0.677
+      },
+      {
+        "code": "performance",
+        "support": 8,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.857,
+        "kappa": 0.839
+      },
+      {
+        "code": "usability",
+        "support": 7,
+        "precision": 1.0,
+        "recall": 0.571,
+        "f1": 0.727,
+        "kappa": 0.702
+      },
+      {
+        "code": "bank_sync",
+        "support": 8,
+        "precision": 0.875,
+        "recall": 0.875,
+        "f1": 0.875,
+        "kappa": 0.856
+      },
+      {
+        "code": "feature_request",
+        "support": 11,
+        "precision": 1.0,
+        "recall": 0.364,
+        "f1": 0.533,
+        "kappa": 0.483
+      },
+      {
+        "code": "pricing",
+        "support": 9,
+        "precision": 1.0,
+        "recall": 0.556,
+        "f1": 0.714,
+        "kappa": 0.68
+      },
+      {
+        "code": "support",
+        "support": 7,
+        "precision": 0.857,
+        "recall": 0.857,
+        "f1": 0.857,
+        "kappa": 0.838
+      },
+      {
+        "code": "praise",
+        "support": 14,
+        "precision": 0.6,
+        "recall": 0.214,
+        "f1": 0.316,
+        "kappa": 0.22
+      }
+    ]
+  }
+}
