@@ -1,0 +1,44 @@
+name: LLM run
+
+# Runs the pipeline with a real model and saves the results in the repo.
+# Start it by hand: GitHub -> Actions -> "LLM run" -> "Run workflow".
+# Needs a repository secret named ANTHROPIC_API_KEY or OPENAI_API_KEY
+# (Settings -> Secrets and variables -> Actions -> New repository secret).
+# The key stays in GitHub; it is never written to the repo or the logs.
+
+on:
+  workflow_dispatch:
+    inputs:
+      provider:
+        description: "Which model provider to use"
+        type: choice
+        options: [anthropic, openai]
+        default: anthropic
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install -e .
+      - name: Run with the real model and update the live report
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python -m feedback_coder run --provider ${{ inputs.provider }} --publish docs/index.html
+      - name: Keep the numbers next to the report
+        run: cp output/metrics.json docs/metrics-${{ inputs.provider }}.json
+      - name: Save the results in the repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add runs/ docs/
+          git commit -m "LLM run with ${{ inputs.provider }}: update cached answers and report" || echo "Nothing changed"
+          git push
